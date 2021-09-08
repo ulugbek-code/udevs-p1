@@ -8,6 +8,6 @@
 #bar-chart-container {
   width: 100%;
   height: 600px;
-  background: rgb(10, 10, 159);
+  background: rgb(109, 109, 191);
 }
 </style>
