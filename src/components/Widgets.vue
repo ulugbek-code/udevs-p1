@@ -68,16 +68,16 @@ export default {
 <style scoped>
 #widgets-container {
   width: 100%;
-  height: 150px;
-  background: rgba(247, 247, 249, 1);
+  height: 170px;
+  background: rgba(247, 247, 249, 1); /*rgba(247, 247, 249, 1);*/
 }
 .wrapper {
   width: 90%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 30px 0;
 }
 .box {
   display: flex;

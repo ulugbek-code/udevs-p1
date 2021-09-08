@@ -24,7 +24,27 @@ export default {
 }
 body {
   font-family: "Inter", sans-serif;
-  background: mediumaquamarine;
+  /* background: mediumaquamarine; */
+}
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(196, 176, 176);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 /* #app {
   /* margin-left: 320px; */

@@ -1,13 +1,44 @@
 <template>
   <div id="bar-chart-container">
-    <h1>Ҳудудлар бўйича ташрифлар</h1>
+    <div class="wrapper">
+      <h2>{{ title }}</h2>
+      <div class="canvas">
+        <!-- Will be deleted -->
+        <h1>For Chart</h1>
+      </div>
+    </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: ["title"],
+};
+</script>
 
 <style scoped>
 #bar-chart-container {
   width: 100%;
   height: 600px;
-  background: rgb(109, 109, 191);
+  padding-bottom: 30px;
+  background: rgba(247, 247, 249, 1);
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+}
+.canvas {
+  width: 100%;
+  height: 90%;
+  background: rgb(179, 92, 92);
+  margin-top: 1rem;
+  /* will be deleted */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
