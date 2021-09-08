@@ -50,6 +50,9 @@
   justify-content: space-between;
   align-items: center;
 }
+#navbar * {
+  font-family: "Inter", sans-serif;
+}
 .btn-groups,
 #btn-groups-third button {
   background: rgba(247, 247, 249, 1);

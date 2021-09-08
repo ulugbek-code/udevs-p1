@@ -114,10 +114,12 @@ export default {
 .info-box h3 {
   font-size: 16px;
   line-height: 24px;
+  font-weight: 600;
 }
 .info-box p {
   font-size: 20px;
   line-height: 32px;
+  font-weight: 500;
 }
 .inner-span {
   font-size: 14px;
