@@ -169,15 +169,6 @@ export default {
           averageVisits: 429,
           averageWaitingTime: 426,
         },
-        {
-          branches: "Яшнобод тумани ДХМ",
-          numberOfVisits: 4846,
-          numberOfVisitorsPerscentage: 12,
-          employees: 1234,
-          employeesPercentage: 42,
-          averageVisits: 429,
-          averageWaitingTime: 426,
-        },
       ],
     };
   },

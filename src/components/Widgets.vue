@@ -81,6 +81,8 @@ export default {
 }
 .box {
   display: flex;
+  justify-content: space-between;
+  width: 20%;
   padding: 20px;
   border-radius: 16px;
   background: #fff;
