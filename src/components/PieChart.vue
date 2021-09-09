@@ -3,16 +3,26 @@
     <div class="wrapper">
       <h2>{{ title }}</h2>
       <div class="canvas">
-        <!-- Will be deleted -->
-        <h1>For Pie Chart</h1>
+        <pie-chart-form :styles="myStyles"></pie-chart-form>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import PieChartForm from "./PieChartForm.vue";
+
 export default {
   props: ["title"],
+  components: { PieChartForm },
+  computed: {
+    myStyles() {
+      return {
+        height: "480px",
+        position: "relative",
+      };
+    },
+  },
 };
 </script>
 
@@ -37,11 +47,6 @@ export default {
 .canvas {
   width: 100%;
   height: 485px;
-  background: rgb(179, 92, 92);
   margin-top: 1rem;
-  /* will be deleted */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 </style>

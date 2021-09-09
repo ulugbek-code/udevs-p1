@@ -3,18 +3,18 @@
     <div class="wrapper">
       <h2>{{ title }}</h2>
       <div class="canvas">
-        <sample-chart :styles="myStyles"></sample-chart>
+        <bar-chart-form :styles="myStyles"></bar-chart-form>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import SampleChart from "./SampleChart.vue";
+import BarChartForm from "./BarChartForm.vue";
 
 export default {
   props: ["title"],
-  components: { SampleChart },
+  components: { BarChartForm },
   computed: {
     myStyles() {
       return {
