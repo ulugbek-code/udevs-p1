@@ -4,7 +4,7 @@
       <h2>{{ title }}</h2>
       <div class="canvas">
         <div class="population">
-          <h3>220243</h3>
+          <h3>{{ population }}</h3>
           <p>Aholi</p>
         </div>
         <pie-chart-form
@@ -21,7 +21,7 @@
 import PieChartForm from "./PieChartForm.vue";
 
 export default {
-  props: ["title", "pie-chart-data", "options"],
+  props: ["title", "pie-chart-data", "options", "population"],
   components: { PieChartForm },
   computed: {
     myStyles() {

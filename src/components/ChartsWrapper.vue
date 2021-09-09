@@ -12,6 +12,7 @@
         <pie-chart
           :pie-chart-data="pieChartData"
           :options="options"
+          :population="population"
           :title="pieChartTitle"
         ></pie-chart>
       </div>
@@ -36,6 +37,7 @@ export default {
     "is-fxdyo",
     "pie-chart-data",
     "options",
+    "population",
   ],
 };
 </script>

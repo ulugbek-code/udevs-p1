@@ -24,6 +24,7 @@
       pie-chart-title="ФҲДЁ хизматлари бўйича"
       :pie-chart-data="pieChartData"
       :options="pieChartOptions"
+      :population="population"
       :is-fxdyo="isFxdyo"
     ></charts-wrapper>
     <table-dashboard
@@ -52,6 +53,7 @@ export default {
   data() {
     return {
       isFxdyo: true,
+      population: 220280,
       barChartData: {
         labels: [
           "Тошкент ш.",
