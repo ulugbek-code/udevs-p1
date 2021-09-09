@@ -4,7 +4,7 @@
       <h2>{{ tableTitle }}</h2>
       <table class="bordered">
         <tr>
-          <th v-for="t in tableHeader" :key="t">{{ t }}</th>
+          <th v-for="(t, i) in tableHeader" :key="i">{{ t }}</th>
         </tr>
         <tr v-for="(t, i) in tableData" :key="i">
           <td>{{ t.branches }}</td>
@@ -20,18 +20,7 @@
 
 <script>
 export default {
-  props: ["table-title", "table-data"],
-  data() {
-    return {
-      tableHeader: [
-        "филиаллар",
-        "ташрифлар сони",
-        "ходимлар сони",
-        "кунлик ўртача ташрифлар",
-        "ўртаcа кутиш вақти",
-      ],
-    };
-  },
+  props: ["table-title", "table-header", "table-data"],
 };
 </script>
 
@@ -63,6 +52,7 @@ table {
 }
 th {
   font-size: 14px;
+  text-transform: uppercase;
   background: linear-gradient(
     180deg,
     rgba(229, 233, 235, 0.25) 0%,
@@ -79,7 +69,7 @@ td,
 th {
   border-bottom: 1px solid #dddddd;
   text-align: left;
-  padding: 12px;
+  padding: 16px;
 }
 td {
   font-size: 18px;

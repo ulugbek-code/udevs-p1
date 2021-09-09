@@ -19,6 +19,7 @@
     ></charts-wrapper>
     <table-dashboard
       table-title="Филиаллар буйича статистика"
+      :table-header="tableHeader"
       :table-data="tableData"
     ></table-dashboard>
   </div>
@@ -41,6 +42,13 @@ export default {
   },
   data() {
     return {
+      tableHeader: [
+        "филиаллар",
+        "ташрифлар сони",
+        "ходимлар сони",
+        "кунлик ўртача ташрифлар",
+        "ўртаcа кутиш вақти",
+      ],
       tableData: [
         {
           branches: "Яшнобод тумани ДХМ",
