@@ -31,9 +31,12 @@ export default {
   padding: 20px;
   border-radius: 16px;
 }
+.wrapper h2 {
+  font-size: 24px;
+}
 .canvas {
   width: 100%;
-  height: 90%;
+  height: 485px;
   background: rgb(179, 92, 92);
   margin-top: 1rem;
   /* will be deleted */

@@ -2,11 +2,11 @@
   <div id="table-dashboard-container">
     <div class="table-wrapper">
       <h2>{{ tableTitle }}</h2>
-      <table>
+      <table class="bordered">
         <tr>
           <th v-for="t in tableHeader" :key="t">{{ t }}</th>
         </tr>
-        <tr v-for="t in tableData" :key="t">
+        <tr v-for="(t, i) in tableData" :key="i">
           <td>{{ t.branches }}</td>
           <td>{{ t.numberOfVisits }} ({{ t.numberOfVisitorsPerscentage }}%)</td>
           <td>{{ t.employees }}({{ t.employeesPercentage }})</td>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  props: ["table-title"],
+  props: ["table-title", "table-data"],
   data() {
     return {
       tableHeader: [
@@ -30,80 +30,6 @@ export default {
         "кунлик ўртача ташрифлар",
         "ўртаcа кутиш вақти",
       ],
-      tableData: [
-        {
-          branches: "Яшнобод тумани ДХМ",
-          numberOfVisits: 4846,
-          numberOfVisitorsPerscentage: 12,
-          employees: 1234,
-          employeesPercentage: 42,
-          averageVisits: 429,
-          averageWaitingTime: 426,
-        },
-        {
-          branches: "Яшнобод тумани ДХМ",
-          numberOfVisits: 4846,
-          numberOfVisitorsPerscentage: 12,
-          employees: 1234,
-          employeesPercentage: 42,
-          averageVisits: 429,
-          averageWaitingTime: 426,
-        },
-        {
-          branches: "Яшнобод тумани ДХМ",
-          numberOfVisits: 4846,
-          numberOfVisitorsPerscentage: 12,
-          employees: 1234,
-          employeesPercentage: 42,
-          averageVisits: 429,
-          averageWaitingTime: 426,
-        },
-        {
-          branches: "Яшнобод тумани ДХМ",
-          numberOfVisits: 4846,
-          numberOfVisitorsPerscentage: 12,
-          employees: 1234,
-          employeesPercentage: 42,
-          averageVisits: 429,
-          averageWaitingTime: 426,
-        },
-        {
-          branches: "Яшнобод тумани ДХМ",
-          numberOfVisits: 4846,
-          numberOfVisitorsPerscentage: 12,
-          employees: 1234,
-          employeesPercentage: 42,
-          averageVisits: 429,
-          averageWaitingTime: 426,
-        },
-        {
-          branches: "Яшнобод тумани ДХМ",
-          numberOfVisits: 4846,
-          numberOfVisitorsPerscentage: 12,
-          employees: 1234,
-          employeesPercentage: 42,
-          averageVisits: 429,
-          averageWaitingTime: 426,
-        },
-        {
-          branches: "Яшнобод тумани ДХМ",
-          numberOfVisits: 4846,
-          numberOfVisitorsPerscentage: 12,
-          employees: 1234,
-          employeesPercentage: 42,
-          averageVisits: 429,
-          averageWaitingTime: 426,
-        },
-        {
-          branches: "Яшнобод тумани ДХМ",
-          numberOfVisits: 4846,
-          numberOfVisitorsPerscentage: 12,
-          employees: 1234,
-          employeesPercentage: 42,
-          averageVisits: 429,
-          averageWaitingTime: 426,
-        },
-      ],
     };
   },
 };
@@ -112,7 +38,7 @@ export default {
 <style scoped>
 #table-dashboard-container {
   width: 100%;
-  height: 824px;
+  /* height: 824px;  */
   padding-bottom: 30px;
   background: rgba(247, 247, 249, 1);
 }
@@ -126,21 +52,47 @@ export default {
   background: #fff;
 }
 table {
+  margin-top: 1.2rem;
+  border-collapse: separate;
+  border-spacing: 0px;
   width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
+}
+.bordered {
+  border-radius: 16px;
+  border: 1px solid rgb(232, 241, 247);
 }
 th {
+  font-size: 14px;
   background: linear-gradient(
     180deg,
-    rgba(229, 233, 235, 0.7) 0%,
+    rgba(229, 233, 235, 0.25) 0%,
     #e5e9eb 100%
   );
-  /* padding: 16px 32px; */
 }
-tr,
-td {
-  position: relative;
+th:first-child {
+  border-top-left-radius: 16px;
+}
+th:last-child {
+  border-top-right-radius: 16px;
+}
+td,
+th {
+  border-bottom: 1px solid #dddddd;
   text-align: left;
+  padding: 12px;
+}
+td {
+  font-size: 18px;
+}
+tr:nth-child(odd) {
+  background-color: rgba(246, 248, 249, 1);
+}
+tr:last-child td:first-child {
+  /* border-bottom: none; */
+  border-bottom-left-radius: 16px;
+}
+tr:last-child td:last-child {
+  /* border-bottom: none; */
+  border-bottom-right-radius: 16px;
 }
 </style>

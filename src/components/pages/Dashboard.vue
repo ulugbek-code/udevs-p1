@@ -19,6 +19,7 @@
     ></charts-wrapper>
     <table-dashboard
       table-title="Филиаллар буйича статистика"
+      :table-data="tableData"
     ></table-dashboard>
   </div>
 </template>
@@ -37,6 +38,57 @@ export default {
     BarChart,
     ChartsWrapper,
     TableDashboard,
+  },
+  data() {
+    return {
+      tableData: [
+        {
+          branches: "Яшнобод тумани ДХМ",
+          numberOfVisits: 4846,
+          numberOfVisitorsPerscentage: 12,
+          employees: 1234,
+          employeesPercentage: 42,
+          averageVisits: 429,
+          averageWaitingTime: 426,
+        },
+        {
+          branches: "Яшнобод тумани ДХМ",
+          numberOfVisits: 4846,
+          numberOfVisitorsPerscentage: 12,
+          employees: 1234,
+          employeesPercentage: 42,
+          averageVisits: 429,
+          averageWaitingTime: 426,
+        },
+        {
+          branches: "Яшнобод тумани ДХМ",
+          numberOfVisits: 4846,
+          numberOfVisitorsPerscentage: 12,
+          employees: 1234,
+          employeesPercentage: 42,
+          averageVisits: 429,
+          averageWaitingTime: 426,
+        },
+        {
+          branches: "Яшнобод тумани ДХМ",
+          numberOfVisits: 4846,
+          numberOfVisitorsPerscentage: 12,
+          employees: 1234,
+          employeesPercentage: 42,
+          averageVisits: 429,
+          averageWaitingTime: 426,
+        },
+        {
+          branches: "Яшнобод тумани ДХМ",
+          numberOfVisits: 4846,
+          numberOfVisitorsPerscentage: 12,
+          employees: 1234,
+          employeesPercentage: 42,
+          averageVisits: 429,
+          averageWaitingTime: 426,
+        },
+      ],
+    };
   },
 };
 </script>
