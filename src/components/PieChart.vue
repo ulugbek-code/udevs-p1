@@ -60,7 +60,7 @@ export default {
 }
 .population {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
@@ -68,7 +68,7 @@ export default {
 }
 .population h3 {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 28px;
 }
 .population p {
   font-size: 18px;
