@@ -3,16 +3,26 @@
     <div class="wrapper">
       <h2>{{ title }}</h2>
       <div class="canvas">
-        <!-- Will be deleted -->
-        <h1>For Chart</h1>
+        <sample-chart :styles="myStyles"></sample-chart>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SampleChart from "./SampleChart.vue";
+
 export default {
   props: ["title"],
+  components: { SampleChart },
+  computed: {
+    myStyles() {
+      return {
+        height: "480px",
+        position: "relative",
+      };
+    },
+  },
 };
 </script>
 
@@ -38,10 +48,5 @@ export default {
 .canvas {
   width: 100%;
   height: 485px;
-  background: rgb(179, 92, 92);
-  /* will be deleted */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 </style>

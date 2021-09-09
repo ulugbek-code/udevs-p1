@@ -13,10 +13,10 @@
     <div class="wrapper">
       <bar-chart title="Ҳудудлар бўйича ташрифлар"></bar-chart>
     </div>
-    <charts-wrapper
+    <!-- <charts-wrapper
       bar-chart-title="Ҳафталик статистика"
       pie-chart-title="ФҲДЁ хизматлари бўйича"
-    ></charts-wrapper>
+    ></charts-wrapper> -->
     <table-dashboard
       table-title="Филиаллар буйича статистика"
       :table-header="tableHeader"
@@ -29,7 +29,7 @@
 import MainNavbar from "../MainNavbar.vue";
 import Widgets from "../Widgets.vue";
 import BarChart from "../BarChart.vue";
-import ChartsWrapper from "../ChartsWrapper.vue";
+// import ChartsWrapper from "../ChartsWrapper.vue";
 import TableDashboard from "../TableDashboard.vue";
 
 export default {
@@ -37,7 +37,7 @@ export default {
     MainNavbar,
     Widgets,
     BarChart,
-    ChartsWrapper,
+    // ChartsWrapper,
     TableDashboard,
   },
   data() {
