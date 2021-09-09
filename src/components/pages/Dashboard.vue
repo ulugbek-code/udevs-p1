@@ -19,7 +19,7 @@
     </div>
     <charts-wrapper
       bar-chart-title="Ҳафталик статистика"
-      :chart-data="barChartData"
+      :chart-data="barChartData2"
       :bar-options="barOptions"
       pie-chart-title="ФҲДЁ хизматлари бўйича"
       :pie-chart-data="pieChartData"
@@ -82,6 +82,39 @@ export default {
             label: "хизмат кўрсатилганлар",
             backgroundColor: "#15F23F",
             data: [7, 2, 6, 12, 3, 5, 8, 7, 4, 7],
+          },
+        ],
+      },
+      barChartData2: {
+        labels: [
+          "Душанба",
+          "Сешанба",
+          "Чоршанба",
+          "Пайшанба",
+          "Жума",
+          "Шанба",
+          "Якшанба",
+        ],
+        datasets: [
+          {
+            label: "ўлим",
+            backgroundColor: "#F82C2C",
+            data: [3, 7, 4, 3, 2, 7, 6],
+          },
+          {
+            label: "ажрим",
+            backgroundColor: "#C82BF4",
+            data: [4, 3, 5, 8, 3, 2, 7],
+          },
+          {
+            label: "никоҳ",
+            backgroundColor: "#15F23F",
+            data: [7, 2, 6, 12, 3, 5, 8],
+          },
+          {
+            label: "туғилиш",
+            backgroundColor: "#4080F4",
+            data: [7, 2, 6, 12, 3, 5, 8],
           },
         ],
       },
