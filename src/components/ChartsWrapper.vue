@@ -1,11 +1,19 @@
 <template>
   <div id="charts-wrapper">
     <div class="wrapper">
-      <div class="bar">
-        <bar-chart :title="barChartTitle"></bar-chart>
+      <div :class="!isFxdyo ? 'full' : ''" class="bar">
+        <bar-chart
+          :chart-data="chartData"
+          :bar-options="barOptions"
+          :title="barChartTitle"
+        ></bar-chart>
       </div>
-      <div class="pie">
-        <pie-chart :title="pieChartTitle"></pie-chart>
+      <div v-if="isFxdyo" class="pie">
+        <pie-chart
+          :pie-chart-data="pieChartData"
+          :options="options"
+          :title="pieChartTitle"
+        ></pie-chart>
       </div>
     </div>
   </div>
@@ -20,7 +28,15 @@ export default {
     BarChart,
     PieChart,
   },
-  props: ["bar-chart-title", "pie-chart-title"],
+  props: [
+    "bar-chart-title",
+    "chart-data",
+    "bar-options",
+    "pie-chart-title",
+    "is-fxdyo",
+    "pie-chart-data",
+    "options",
+  ],
 };
 </script>
 
@@ -38,6 +54,9 @@ export default {
 }
 .bar {
   width: 69%;
+}
+.bar.full {
+  width: 100%;
 }
 .pie {
   width: 29%;

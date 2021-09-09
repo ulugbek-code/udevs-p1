@@ -3,7 +3,15 @@
     <div class="wrapper">
       <h2>{{ title }}</h2>
       <div class="canvas">
-        <pie-chart-form :styles="myStyles"></pie-chart-form>
+        <div class="population">
+          <h3>220243</h3>
+          <p>Aholi</p>
+        </div>
+        <pie-chart-form
+          :chart-data="pieChartData"
+          :options="options"
+          :styles="myStyles"
+        ></pie-chart-form>
       </div>
     </div>
   </div>
@@ -13,7 +21,7 @@
 import PieChartForm from "./PieChartForm.vue";
 
 export default {
-  props: ["title"],
+  props: ["title", "pie-chart-data", "options"],
   components: { PieChartForm },
   computed: {
     myStyles() {
@@ -48,5 +56,21 @@ export default {
   width: 100%;
   height: 485px;
   margin-top: 1rem;
+  position: relative;
+}
+.population {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  text-align: center;
+}
+.population h3 {
+  font-weight: 700;
+  font-size: 32px;
+}
+.population p {
+  font-size: 18px;
 }
 </style>

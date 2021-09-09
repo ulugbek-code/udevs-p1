@@ -11,11 +11,20 @@
       finishedPer="24"
     ></widgets>
     <div class="wrapper">
-      <bar-chart title="Ҳудудлар бўйича ташрифлар"></bar-chart>
+      <bar-chart
+        :chart-data="barChartData"
+        :bar-options="barOptions"
+        title="Ҳудудлар бўйича ташрифлар"
+      ></bar-chart>
     </div>
     <charts-wrapper
       bar-chart-title="Ҳафталик статистика"
+      :chart-data="barChartData"
+      :bar-options="barOptions"
       pie-chart-title="ФҲДЁ хизматлари бўйича"
+      :pie-chart-data="pieChartData"
+      :options="pieChartOptions"
+      :is-fxdyo="isFxdyo"
     ></charts-wrapper>
     <table-dashboard
       table-title="Филиаллар буйича статистика"
@@ -42,6 +51,78 @@ export default {
   },
   data() {
     return {
+      isFxdyo: true,
+      barChartData: {
+        labels: [
+          "Тошкент ш.",
+          "Тошкент в.",
+          "Сирдарё",
+          "Жиззах",
+          "Самарқанд",
+          "Сурхандарё",
+          "Қашқадарё",
+          "Бухоро",
+          "Хоразм",
+          "Қорақалпоғистон",
+        ],
+        datasets: [
+          {
+            label: "кўп кутганлар",
+            backgroundColor: "#F82C2C",
+            data: [3, 7, 4, 3, 2, 7, 4, 3, 9, 6],
+          },
+          {
+            label: "кутаётганлар",
+            backgroundColor: "#C82BF4",
+            data: [4, 3, 5, 8, 3, 2, 7, 4, 6, 4],
+          },
+          {
+            label: "хизмат кўрсатилганлар",
+            backgroundColor: "#15F23F",
+            data: [7, 2, 6, 12, 3, 5, 8, 7, 4, 7],
+          },
+        ],
+      },
+      barOptions: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+              },
+              gridLines: {
+                display: true,
+              },
+            },
+          ],
+          xAxes: [
+            {
+              gridLines: {
+                display: false,
+              },
+            },
+          ],
+        },
+        legend: {
+          display: true,
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+      },
+      pieChartData: {
+        labels: ["ўлим", "никоҳ", "туғилиш", "ажрим"],
+        datasets: [
+          {
+            label: "Population (millions)",
+            backgroundColor: ["#EE4F4F", "#2BD838", "#4080F4", "#B733F3"],
+            data: [3124, 1523, 9213, 1231],
+          },
+        ],
+      },
+      pieChartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
       tableHeader: [
         "филиаллар",
         "ташрифлар сони",

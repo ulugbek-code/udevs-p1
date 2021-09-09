@@ -47,5 +47,6 @@ body {
   background: #555;
 }
 /* #app {
-  /* margin-left: 320px; */
+  margin-left: 320px;
+} */
 </style>

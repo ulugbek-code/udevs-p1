@@ -3,7 +3,11 @@
     <div class="wrapper">
       <h2>{{ title }}</h2>
       <div class="canvas">
-        <bar-chart-form :styles="myStyles"></bar-chart-form>
+        <bar-chart-form
+          :chart-data="chartData"
+          :options="barOptions"
+          :styles="myStyles"
+        ></bar-chart-form>
       </div>
     </div>
   </div>
@@ -13,7 +17,7 @@
 import BarChartForm from "./BarChartForm.vue";
 
 export default {
-  props: ["title"],
+  props: ["title", "chart-data", "bar-options"],
   components: { BarChartForm },
   computed: {
     myStyles() {
