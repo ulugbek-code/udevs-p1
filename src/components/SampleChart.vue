@@ -24,17 +24,17 @@ export default {
         datasets: [
           {
             label: "кўп кутганлар",
-            backgroundColor: "#F6785D",
+            backgroundColor: "#F82C2C",
             data: [3, 7, 4, 3, 2, 7, 4, 3, 9, 6],
           },
           {
             label: "кутаётганлар",
-            backgroundColor: "#D86CF7",
+            backgroundColor: "#C82BF4",
             data: [4, 3, 5, 8, 3, 2, 7, 4, 6, 4],
           },
           {
             label: "хизмат кўрсатилганлар",
-            backgroundColor: "#57F875",
+            backgroundColor: "#15F23F",
             data: [7, 2, 6, 12, 3, 5, 8, 7, 4, 7],
           },
         ],
